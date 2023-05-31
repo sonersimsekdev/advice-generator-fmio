@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <div>
+    <div id="advice"></div>
+    <button onclick="fetchData()">fetch</button>
+  </div>
+  <body>
+    <script>
+      let adviceText = document.querySelector("#advice");
+      let fetchData;
+      window.onload = function () {
+        //JavaScript goes here
+        adviceText.textContent = "hi";
+      };
+      try {
+        fetchData = () => {
+          fetch("https://api.adviceslip.com/advice")
+            .then((response) => response.json())
+            .then((data) => changeAdvice(data))
+            .catch((err) => console.error(err));
+        };
+        function changeAdvice(data) {
+            console.log(data)
+          let text = `${data.slip.advice} - ${data.slip.id}`;
+          adviceText.textContent = text;
+        }
+        // Try to run this code
+      } catch (err) {
+        // if any error, Code throws the error
+        console.log(err);
+      }
+    </script>
+  </body>
+</html>
