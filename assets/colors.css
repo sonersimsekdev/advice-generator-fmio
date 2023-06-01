@@ -1,0 +1,26 @@
+:root {
+  /*primary colors*/
+  --primary-cyan: rgb(206, 227, 233);
+  --neon-green: rgb(82, 255, 168);
+
+  /*neutral colors*/
+  --grayish-blue: rgb(78, 93, 115);
+  --dark-grayish-blue: rgb(50, 58, 73);
+  --dark-blue: rgb(31, 38, 50);
+}
+
+.primary-cyan {
+  color: var(--primary-cyan);
+}
+.neon-green {
+  color: var(--neon-green);
+}
+.grayish-blue {
+  color: var(--grayish-blue);
+}
+.dark-grayish-blue {
+  color: var(--dark-grayish-blue);
+}
+.dark-blue {
+  color: var(--dark-blue);
+}
