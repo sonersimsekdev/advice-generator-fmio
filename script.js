@@ -7,7 +7,7 @@ window.onload = function () {
   fetchData();
 };
 window.onresize = function () {
-  console.log(window.screen.width);
+  //console.log(window.screen.width);
   if (window.screen.width < 376) {
     document.querySelector("#divider-svg").src =
       "/assets/images/pattern-divider-mobile.svg";
@@ -25,11 +25,13 @@ try {
       .catch((err) => console.error(err));
   };
   function changeAdvice(data) {
-    console.log(data);
-    setTimeout(() => {
+    //console.log(data);
+    adviceText.textContent = "Loading..."; //loading helper text
+     setTimeout(() => {
       adviceId.textContent = `ADVICE - #${data.slip.id}`;
       adviceText.textContent = `"${data.slip.advice}"`;
-    }, 0.2);
+    }, 1000);
+    
   }
 } catch (err) {
   console.log(err);

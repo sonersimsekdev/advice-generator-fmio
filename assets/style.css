@@ -4,14 +4,15 @@
 
 html,
 body {
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1440px;
   height: 100%;
   width: 100%;
-  max-width: 1440px;
   background-color: var(--dark-blue);
 }
 
 body {
-  
   display: grid;
   place-items: center;
 }
@@ -28,78 +29,86 @@ body {
   height: 250px;
   border-radius: 25px;
   background-color: var(--dark-grayish-blue);
+}
 
-  > #advice-id {
-    display: flex;
-    align-items: center;
-    height: 50%;
-    color: var(--neon-green);
-    font-size: 0.5rem;
-  }
+.advice-card > #advice-id {
+  display: flex;
+  align-items: center;
+  height: 50%;
+  color: var(--neon-green);
+  font-size: 0.5rem;
+}
 
-  > #advice {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    color: var(--primary-cyan);
-    font-size: 1rem;
-  }
+.advice-card > #advice {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  color: var(--primary-cyan);
+  font-size: 1rem;
+}
 
-  > .divider {
-    display: flex;
-    align-items: center;
-    > img {
-      width: 100%;
-    }
-    height: 50%;
-    max-width: 500px;
-  }
+.advice-card > .divider {
+  display: flex;
+  align-items: center;
+  height: 50%;
+  max-width: 500px;
+}
 
-  > .notch {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    margin-right: auto;
-    margin-left: auto;
-    left: 0;
-    right: 0;
-    bottom: -10%;
-    background-color: var(--neon-green);
-    border-radius: 100%;
-    cursor: pointer;
+.advice-card > .divider > img {
+  width: 100%;
+}
 
-    &:hover {
-      box-shadow: 0px 0px 20px var(--neon-green);
-    }
-  }
+.advice-card > .notch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  margin-right: auto;
+  margin-left: auto;
+  left: 0;
+  right: 0;
+  bottom: -8%;
+  background-color: var(--neon-green);
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.advice-card > .notch:hover {
+  box-shadow: 0px 0px 20px var(--neon-green);
 }
 
 @media only screen and (max-width: 375px) {
   .advice-card {
     width: 200px;
     height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     
+  }
 
-    > #advice {
-      font-size: 0.5rem;
-    }
+  .advice-card > #advice {
+    font-size: 0.5rem;
+  }
 
-    > #advice-id {
-      font-size: 0.25rem;
-      height: 25%;
-    }
+  .advice-card > #advice-id {
+    font-size: 0.25rem;
+    height: 25%;
+  }
 
-    > .divider > img {
+  .advice-card > .divider > img {
+    width: 100%;
+  }
 
-      width: 100%;
-    }
-
-    > .nothch {
-      width: 10px;
-      height: 10px;
-      bottom: -50%;
-    }
+  .advice-card > .notch {
+    width: 35px;
+    height: 35px;
+    margin-bottom: -5px;
+  }
+  .advice-card > .notch > img {
+    width: 50%;
+    height: 50%;
   }
 }
