@@ -4,15 +4,15 @@
 
 html,
 body {
-  margin: 0 auto;
-  padding: 0;
-  max-width: 1440px;
   height: 100%;
   width: 100%;
-  background-color: var(--dark-blue);
 }
 
 body {
+  background-color: var(--dark-blue);
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1440px;
   display: grid;
   place-items: center;
 }
@@ -112,3 +112,38 @@ body {
     height: 50%;
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .advice-card {
+    width: 300px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     
+  }
+
+  .advice-card > #advice {
+    font-size: 0.8rem;
+  }
+
+  .advice-card > #advice-id {
+    font-size: 0.4rem;
+    height: 25%;
+  }
+
+  .advice-card > .divider > img {
+    width: 100%;
+  }
+
+  .advice-card > .notch {
+    width: 40px;
+    height: 40px;
+    margin-bottom: -5px;
+  }
+  .advice-card > .notch > img {
+    width: 50%;
+    height: 50%;
+  }
+}
+
